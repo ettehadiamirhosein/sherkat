@@ -1,0 +1,291 @@
+.footer-section {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 3rem 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+/* ستون‌های فوتر */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+/* عنوان ستون‌ها */
+.footer-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fc5d1b;
+  margin-right: 1rem;
+  padding-right: 0.5rem;
+}
+
+/* لیست لینک‌ها */
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+  display: block;
+  transition: color 0.2s;
+  border-right: 1px solid;
+  text-align: right;
+  transform: translateX(-83px);
+  padding-right: 9px;
+}
+
+.footer-link:hover {
+  color: #ff6b00;
+}
+
+/* شبکه‌های اجتماعی */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  border-right: 1px solid #858585;
+  padding-right: 5px;
+  transform: translateX(-65px);
+}
+
+.social-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: #ff6b00;
+}
+
+.social-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* اطلاعات تماس */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-right: 1px solid #858585;
+  padding-right: 5px;
+  transform: translateX(-39px);
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.contact-item svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* لوگو شرکت */
+.company-logo {
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  background-color: rgba(255, 107, 0, 0.1);
+  border-radius: 50%;
+  transform: translateX(4px);
+}
+
+.company-info p {
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+  color: #858585;
+}
+
+/* درباره ما */
+.about-text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0;
+  transform: translateY(-31px);
+}
+
+/* کپی‌رایت */
+.footer-copyright {
+  margin-top: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.image-logo1 {
+  width: 45px;
+  height: 45px;
+  transform: translate(158px, -50px);
+}
+
+/* ========================================
+   ریسپانسیو - تبلت (1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* حذف transform و border در تبلت */
+  .footer-link,
+  .social-links,
+  .contact-info {
+    transform: none !important;
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .footer-link {
+    border-right: none;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .social-links,
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .image-logo1 {
+    transform: translate(0, -30px);
+  }
+
+  .about-text {
+    transform: translateY(0);
+    text-align: center;
+  }
+}
+
+/* ========================================
+   ریسپانسیو - موبایل بزرگ (768px)
+   ======================================== */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-column {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  /* ریست کامل موقعیت‌ها */
+  .footer-link,
+  .social-links,
+  .contact-info,
+  .company-logo,
+  .about-text,
+  .image-logo1 {
+    transform: none !important;
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .footer-link {
+    padding: 0.6rem 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    border-right: none;
+  }
+
+  .social-link,
+  .contact-item {
+    justify-content: center;
+  }
+
+  .image-logo1 {
+    transform: translateY(-20px);
+    margin: 0 auto;
+    display: block;
+  }
+
+  .company-logo {
+    margin: 0 auto;
+  }
+}
+
+/* ========================================
+   موبایل کوچک (480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 2rem 0.8rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-link,
+  .social-link,
+  .contact-item p {
+    font-size: 0.8125rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.6875rem;
+    padding: 0.8rem 0;
+  }
+
+  .image-logo1 {
+    width: 40px;
+    height: 40px;
+  }
+}

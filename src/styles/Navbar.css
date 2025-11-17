@@ -1,0 +1,348 @@
+/* کد اصلی شما (بدون تغییر) */
+.navbar {
+  background-color: #161616;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Row Styles */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #959292;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.logo-letter {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.logo-text {
+  font-size: 0.875rem;
+}
+
+.logo-main {
+  font-weight: 600;
+}
+
+.logo-sub {
+  font-weight: 300;
+}
+
+.top-right-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-symbol {
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.box-icon,
+.document-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-symbol,
+.document-symbol {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Bottom Row Styles */
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  padding: 0.5rem 2.75rem 0.5rem 2.5rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  width: 250px;
+  color: #fff;
+  font-size: 0.875rem;
+  outline: none;
+  text-align: right;
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+.search-button-inside {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: orangered;
+  border: 1px solid orangered;
+  cursor: pointer;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.search-button-img {
+  text-align: center;
+  padding-top: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-button {
+  background-color: gray;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-button-img {
+  padding-top: 2px;
+  width: 18px;
+  height: 18px;
+}
+
+.social-button:hover {
+  background-color: #444;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #ff6b00;
+}
+
+.nav-link.active {
+  color: #ff6b00;
+  border-bottom: 2px solid #ff6b00;
+}
+
+.nav-link.active:hover {
+  color: #ff8c00;
+}
+
+/* ========================
+   ریسپانسیو موبایل
+   ======================== */
+
+/* آیکون همبرگر (نیاز به HTML دارد) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* نمایش همبرگر در موبایل */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* مخفی کردن لینک‌ها در موبایل */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #161616;
+    padding: 1rem 2rem;
+    border-top: 1px solid #333;
+    z-index: 1000;
+  }
+
+  /* نمایش منو وقتی کلاس active اضافه شود */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #333;
+    font-size: 1rem;
+  }
+
+  .nav-link.active {
+    border-bottom: 2px solid #ff6b00;
+  }
+
+  /* جستجو تمام عرض */
+  .search-container {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* ترتیب مجدد در موبایل */
+  .navbar-bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-section {
+    order: 1;
+    width: 100%;
+  }
+
+  .social-icons {
+    order: 2;
+    justify-content: center;
+  }
+
+  /* نمایش همبرگر و مدیریت منو */
+  .navbar-bottom > .hamburger {
+    order: 3;
+    align-self: flex-end;
+  }
+
+  /* کوچک‌تر کردن لوگو */
+  .logo-letter {
+    font-size: 1.25rem;
+  }
+
+  .logo-text {
+    font-size: 0.75rem;
+  }
+
+  .top-right-items {
+    gap: 1rem;
+  }
+}
+
+/* تبلت کوچک */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-letter {
+    font-size: 1.1rem;
+  }
+
+  .top-item {
+    gap: 0.25rem;
+  }
+
+  .star-icon,
+  .box-icon,
+  .document-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .star-symbol,
+  .box-symbol,
+  .document-symbol {
+    font-size: 0.8rem;
+  }
+
+  .social-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-button-img {
+    width: 16px;
+    height: 16px;
+  }
+}

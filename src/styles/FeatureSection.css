@@ -1,0 +1,377 @@
+.features-section {
+  background-color: #121212;
+  padding: 4rem 2rem 2rem 2rem;
+  position: relative;
+  z-index: 2;
+  height: 505px;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 3.2s;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #1a1c1e, #1a1c1e);
+  border-radius: 8px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 1.2s;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-65%);
+}
+
+.feature-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 3.2s;
+  background: #fd5e1b;
+}
+
+.feature-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #161616;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+  transform: translateY(-65%);
+}
+
+.feature-icon:hover {
+  transform: scale(1.1);
+  transform: translateY(-57%);
+}
+
+.feature-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: #fff;
+  font-weight: 500;
+  transform: translateY(-62%);
+}
+
+.detail-item {
+  font-size: 19px;
+  color: #fff;
+  padding: 1px 1px 1px 1px;
+}
+
+.feature-text1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: #fff;
+  font-weight: 500;
+  transform: translateY(-68%);
+}
+
+.feature-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #161616;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: background-color 0.2s;
+  transform: translateY(96%);
+}
+
+.feature-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(96%);
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  direction: rtl;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #0a0a0a;
+}
+
+.detail-item {
+  line-height: 1.4;
+  font-size: 19px;
+  color: #fff;
+  padding: 1px 1px 1px 1px;
+  padding-bottom: 2px;
+  transform: translateY(-50%);
+}
+
+.company-description {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  transform: translateY(-40%);
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.description-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.description-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.view-products-button {
+  background-color: transparent;
+  color: #ff6b00;
+  border: 1px solid #ff6b00;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.view-products-button2 {
+  background-color: transparent;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.view-products-button:hover {
+  background-color: #ff6b00;
+  color: #fff;
+}
+
+/* ========================================
+   ریسپانسیو - تبلت (1024px)
+   فقط تغییرات لازم — دسکتاپ دست‌نخورده
+   ======================================== */
+@media (max-width: 1024px) {
+  .features-section {
+    height: auto !important;
+    padding: 3rem 1rem 2rem 1rem !important;
+  }
+
+  .features-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.2rem !important;
+  }
+
+  .feature-card {
+    transform: translateY(-40%) !important;
+    padding: 18px 8px !important;
+  }
+
+  .feature-icon {
+    width: 45px !important;
+    height: 45px !important;
+    transform: translateY(-40%) !important;
+  }
+
+  .feature-text,
+  .feature-text1 {
+    font-size: 16px !important;
+    transform: translateY(-40%) !important;
+  }
+
+  .detail-item {
+    font-size: 17px !important;
+    transform: translateY(-40%) !important;
+  }
+
+  .feature-arrow {
+    transform: translateY(70%) !important;
+  }
+
+  .company-description {
+    margin: 2rem auto 0 !important;
+    transform: translateY(0) !important;
+    padding: 1.5rem !important;
+  }
+
+  .description-title {
+    font-size: 1.35rem !important;
+  }
+
+  .description-text {
+    font-size: 15px !important;
+  }
+
+  .details-list {
+    font-size: 0.8125rem !important;
+  }
+}
+
+/* ========================================
+   ریسپانسیو - تبلت کوچک (768px)
+   ======================================== */
+@media (max-width: 768px) {
+  .features-section {
+    padding: 2.5rem 1rem 1.5rem 1rem !important;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .feature-card {
+    transform: translateY(-30%) !important;
+    padding: 16px 6px !important;
+  }
+
+  .feature-icon {
+    width: 40px !important;
+    height: 40px !important;
+    transform: translateY(-30%) !important;
+  }
+
+  .feature-text,
+  .feature-text1 {
+    font-size: 15px !important;
+    transform: translateY(-30%) !important;
+  }
+
+  .detail-item {
+    font-size: 16px !important;
+    transform: translateY(-30%) !important;
+  }
+
+  .feature-arrow {
+    transform: translateY(60%) !important;
+  }
+
+  .company-description {
+    margin: 1.5rem auto 0 !important;
+    padding: 1.2rem !important;
+  }
+
+  .description-title {
+    font-size: 1.25rem !important;
+  }
+
+  .description-text {
+    font-size: 14px !important;
+  }
+
+  .details-list {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* ========================================
+   موبایل بزرگ (480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .features-section {
+    padding: 2rem 0.8rem 1rem 0.8rem !important;
+  }
+  .hero-section {
+    /* min-height: 17vh; */
+    height: 274px;
+  }
+
+  .feature-card {
+    transform: translateY(-20%) !important;
+    padding: 14px 4px !important;
+  }
+
+  .feature-icon {
+    width: 36px !important;
+    height: 36px !important;
+    transform: translateY(-20%) !important;
+  }
+
+  .feature-text,
+  .feature-text1 {
+    font-size: 14px !important;
+    transform: translateY(-20%) !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .detail-item {
+    font-size: 15px !important;
+    transform: translateY(-20%) !important;
+    padding-bottom: 1px !important;
+  }
+
+  .feature-arrow {
+    transform: translateY(50%) !important;
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .company-description {
+    margin: 1rem auto 0 !important;
+    padding: 1rem !important;
+  }
+
+  .description-title {
+    font-size: 1.1rem !important;
+  }
+
+  .description-text {
+    font-size: 13px !important;
+  }
+
+  .view-products-button,
+  .view-products-button2 {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.8125rem !important;
+  }
+}
+
+/* ========================================
+   موبایل خیلی کوچک (360px)
+   ======================================== */
+@media (max-width: 360px) {
+  .feature-text,
+  .feature-text1 {
+    font-size: 13px !important;
+  }
+
+  .detail-item {
+    font-size: 14px !important;
+  }
+
+  .description-title {
+    font-size: 1rem !important;
+  }
+
+  .description-text {
+    font-size: 12px !important;
+  }
+}

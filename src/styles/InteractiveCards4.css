@@ -1,0 +1,389 @@
+/* === پایه === */
+.interactive-cards-section {
+  background-color: #161616;
+  padding: 60px 16px;
+  color: white;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.section-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.section-label {
+  color: #f97316;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+  justify-content: start;
+  direction: rtl;
+}
+
+.card {
+  background-color: #1a1c1e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.5);
+}
+
+.card-image-container {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+
+  object-fit: cover;
+  border-radius: 0 0 200px 200px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.1);
+}
+
+/* ماسک گرادیان پایین */
+.card-image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to top, #1a1a1a 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.card-content {
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.card-subtitle {
+  color: #f97316;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.toggle-btn {
+  width: 38px;
+  height: 38px;
+  background-color: #f97316;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* .toggle-btn:hover {
+  background-color: #ea580c;
+  transform: scale(1.12);
+} */
+
+.toggle-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn.open svg {
+  transform: rotate(180deg);
+}
+
+.product-code-container {
+  margin-top: 14px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.product-code {
+  background-color: #262626;
+  border: 1px solid #f97316;
+  border-radius: 8px;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.code-label {
+  font-size: 10px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 4px;
+}
+
+.code-value {
+  font-family: "Courier New", monospace;
+  font-size: 17px;
+  font-weight: bold;
+  color: #f97316;
+}
+
+/* === انیمیشن باز/بسته شدن === */
+.closed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  margin-top: 0;
+}
+
+.open {
+  max-height: 100px;
+  opacity: 1;
+  padding: 14px 0;
+  margin-top: 14px;
+}
+
+/* === فلش پایین === */
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.scroll-btn {
+  width: 44px;
+  height: 44px;
+  background-color: #262626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.scroll-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke: #f97316;
+}
+
+/* === ریسپانسیو === */
+
+/* موبایل کوچک (تا 480px) */
+@media (max-width: 480px) {
+  .interactive-cards-section {
+    padding: 40px 12px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-label {
+    font-size: 15px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 8px;
+  }
+
+  .card-image-container {
+    height: 140px;
+  }
+
+  .card-content {
+    padding: 16px 12px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+  }
+
+  .toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .toggle-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .code-value {
+    font-size: 16px;
+  }
+
+  .scroll-down {
+    margin-top: 32px;
+  }
+
+  .scroll-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* موبایل بزرگ و تبلت کوچک (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* تبلت (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* لپ‌تاپ کوچک (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* دسکتاپ (1200px و بیشتر) */
+@media (min-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* src/components/InteractiveCards.css */
+
+/* ... بقیه کدهای قبلی ... */
+
+/* کانتینر کد محصول - بالای فلش */
+.product-code-wrapper {
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+}
+
+.code-label {
+  font-size: 10px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 2px;
+}
+
+.code-value {
+  font-family: "Courier New", monospace;
+  font-size: 17px;
+  font-weight: bold;
+  color: #f97316;
+}
+
+/* حالت بسته */
+.closed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* حالت باز */
+.open {
+  max-height: 100px;
+  opacity: 1;
+  padding: 0 0 12px;
+  margin-bottom: 12px;
+}
+
+/* دکمه فلش - همیشه وسط */
+.toggle-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #161616;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  transform: translateY(35px);
+}
+
+/* .toggle-btn:hover {
+  background-color: #161616;
+  transform: scale(1.12);
+} */
+
+.toggle-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn.open svg {
+  transform: rotate(180deg);
+}
+
+/* وقتی کد بازه، فلش کمی پایین‌تر بره */
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
