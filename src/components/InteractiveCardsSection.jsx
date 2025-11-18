@@ -10,7 +10,7 @@ const InteractiveCardsSection = () => {
       id: 3,
       title: "ایزوله شمش ریزی تک لایه",
       subtitle: "نیمه مداوم",
-      image: "/img2/isotak.png",
+      image: "/img2/isotak4.png",
       code: "IPZ1-s",
     },
     {

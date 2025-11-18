@@ -28,7 +28,7 @@ const PartnersSection = () => {
     },
     {
       id: 4,
-      name: "شرکت IASK",
+      name: "شرکت فولاد آلیاژی اصفهان ",
       logo: <img src={iack}></img>,
     },
     {

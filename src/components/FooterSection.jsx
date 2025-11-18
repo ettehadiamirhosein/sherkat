@@ -64,15 +64,19 @@ const FooterSection = () => {
           <h3 className="footer-title">اطلاعات تماس</h3>
           <div className="contact-info">
             <div className="contact-item">
-              <span>تلفن: +989133183179</span>
+              <span>تلفن: ۰۹۱۳۲۱۸۳۱۲۹مهندس کیانی </span>
               <img src="/img2/mynaui_telephone.svg"></img>
             </div>
             <div className="contact-item">
-              <span>payazobasia-co@istt.ir :ایمیل </span>
+              <span>تلفن ثابت: ۰۳۱۳۳۹۳۱۲۳۰ </span>
+              <img src="/img2/mynaui_telephone.svg"></img>
+            </div>
+            <div className="contact-item">
+              <span>payazobasiya@gmail.com :ایمیل </span>
               <img src="/img2/mail.svg"></img>
             </div>
             <div className="contact-item">
-              <span>ساعات کاری: ۸ صبح تا ۱۸</span>
+              <span>ساعات کاری:8 صبح تا 16</span>
               <img src="/img2/vector.svg"></img>
             </div>
           </div>
@@ -82,7 +86,7 @@ const FooterSection = () => {
         <div className="footer-column company-column">
           <div className="company-info">
             <img src={shahrak} className="company-logo"></img>
-            <p>شرکت علمی تحقیقاتی اصفهان</p>
+            <p>شهرک علمی و تحقیقاتی اصفهان</p>
             <img src={bonyan} className="company-logo"></img>
             <p>مرکز شرکت های دانش بنیان</p>
           </div>
@@ -93,8 +97,7 @@ const FooterSection = () => {
           <h3 className="footer-title">پایا ذوب آسیا</h3>
           <img src={logo} className="image-logo1"></img>
           <p className="about-text">
-            تولیدکننده و تأمین انواع فولادهای صنعتی، ساختمانی و آلیاژی با مرکز
-            بر کیفیت، نوآوری و رضایت مشتری.
+            تولید کننده مواد اولیه ریخته گری وقطعات سرامیکی
           </p>
         </div>
       </div>
